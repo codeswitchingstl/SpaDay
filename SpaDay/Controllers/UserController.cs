@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
 using SpaDay.Models;
 
 namespace SpaDay.Controllers
@@ -27,12 +28,14 @@ namespace SpaDay.Controllers
         {
             if(newUser.Password == verify)
             {
-                ViewBag.user = newUser.Name;
+                ViewBag.user = newUser;
                 return View("Index");
             }
             else
             {
-                ViewBag.error = "Your password was not accepted.";
+                ViewBag.error = "Your password was not accepted. Try again.";
+                ViewBag.name = newUser.Name;
+                ViewBag.email = newUser.Email;
                 return View("Add");
             }
         }
