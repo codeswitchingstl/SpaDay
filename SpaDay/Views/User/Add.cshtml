@@ -1,7 +1,6 @@
 ﻿<h1>Add User</h1>
 <div>@ViewBag.error</div>
-<br />
-<form method="post" action="/user">
+<form method="post" action="/user/add">
     <div class="form-group">
         <label for="name">Name: </label>
         <input name="name" type="text"/>
@@ -16,7 +15,7 @@
     </div>
     <div class="form-group">
         <label for="verify">Verify Password: </label>
-        <input name="password" type="password" />
+        <input name="verify" type="password" />
     </div>
     <input type="submit" value="Add User" />
 </form>

@@ -17,6 +17,4 @@ namespace SpaDay.Models
             Password = password;
         }
     }
-
-
 }
