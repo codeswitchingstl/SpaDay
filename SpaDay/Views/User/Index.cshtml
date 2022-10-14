@@ -2,3 +2,10 @@
 <p>
     <a asp-controller="spa" asp-action="Index">Spa Specialties</a>
 </p>
+<div>
+    <h3>Client Details</h3>
+    <ul>
+        <li>E-mail: @ViewBag.user.Email</li>
+        <li>Date Joined: @ViewBag.user.Date</li>
+    </ul>
+</div>

@@ -9,10 +9,11 @@ namespace SpaDay.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public DateTime Date { get; }
 
         public User()
         {
-
+            Date = DateTime.Now;
         }
 
         public User(string name, string email, string password)
@@ -20,6 +21,7 @@ namespace SpaDay.Models
             Name = name;
             Email = email;
             Password = password;
+
         }
     }
 }
