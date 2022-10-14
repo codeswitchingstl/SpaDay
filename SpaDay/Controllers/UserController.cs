@@ -26,7 +26,7 @@ namespace SpaDay.Controllers
         [Route("/user/add")]
         public IActionResult SubmitAddUserForm(User newUser, string verify)
         {
-            if (newUser.Password == verify)
+            if(newUser.Password == verify)
             {
                 ViewBag.user = newUser;
                 return View("Index");
